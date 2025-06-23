@@ -11,10 +11,22 @@ const ANY_USERS_DATA = [{id: 1, username: "Step", email: "123@123.com", age: 20}
 
 const app = express();
 
+const createUser = (input) => {
+    const id = Date.now();
+    return { id, ...input }
+}
+
 // это резолвер - функция, возвращающая данные конктретной схемы
 const root = {
     getAllUsers: () => { return ANY_USERS_DATA },
-    getUser: ({id}) => { return ANY_USERS_DATA.find(user => user.id === id) }
+
+    getUser: ({id}) => { return ANY_USERS_DATA.find(user => user.id === id) },
+
+    createUser: ({input}) => {
+        const user = createUser(input);
+        ANY_USERS_DATA.push(user);
+        return user;
+    }
 }
 
 

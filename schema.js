@@ -32,6 +32,10 @@ const schema = buildSchema(`
         getAllUsers: [User],
         getUser(id: ID): User
     }
+    
+    type Mutation {
+        createUser(input: UserInput): User 
+    }
 `);
 
 // инпуты - это мутации для создания новых объектов
