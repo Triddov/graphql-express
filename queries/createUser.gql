@@ -1,0 +1,16 @@
+mutation {
+    createUser(input: {
+        username: "YaEblan",
+        age: 123,
+        email: "qwe@qwe.com"
+        posts: [{
+            title: "postTitle",
+            content: "lot of random text"
+        }, {
+            title: "postTitle2",
+            content: "lot of random text2"
+        }]
+    }) {
+        id, username
+    }
+}

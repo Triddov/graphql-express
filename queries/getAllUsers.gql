@@ -1,0 +1,5 @@
+query {
+    getAllUsers {
+        id, email, username, posts {id, title, content}
+    }
+}
