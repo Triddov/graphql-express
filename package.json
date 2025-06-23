@@ -1,0 +1,23 @@
+{
+  "name": "graphql-api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "try graphql",
+  "keywords": [
+    "graphql"
+  ],
+  "license": "ISC",
+  "author": "triddov",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon -V index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
